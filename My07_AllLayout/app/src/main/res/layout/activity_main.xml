@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="300"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+
+            android:weightSum="4">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:backgroundTint="#FF7C7575"
+
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:backgroundTint="#FF7C7575"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:backgroundTint="#FF7C7575"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:backgroundTint="#FF7C7575"
+                />
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:backgroundTint="#FF7C7575" />
+
+    </LinearLayout> //1번
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnChange1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+
+            android:text="이미지 바꾸기"
+            app:backgroundTint="#FF7C7575" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/imageDream1"
+                android:layout_width="match_parent"
+                android:layout_height="191dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/dream01"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/imageDream2"
+                android:layout_width="match_parent"
+                android:layout_height="191dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/dream02"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/imageDream3"
+                android:layout_width="match_parent"
+                android:layout_height="191dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/dream03"
+                android:visibility="gone"/>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>//2번
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnChange2"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:text="이미지 바꾸어 보여주기"
+            app:backgroundTint="#FF7C7575" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/image01"
+                        android:visibility="visible"/>
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content" /> //그냥 공간
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/image02"
+                        android:visibility="gone"/>
+
+
+                </FrameLayout>
+
+
+            </ScrollView>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>
